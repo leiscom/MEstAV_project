@@ -77,7 +77,7 @@ def ran_positions ( n, box, length, soft, quaternions ):
     # or the density rather low
     # For atoms, for which length=0.0, the e-coordinates will be ignored
 
-    iter_max = 10000 # Max random placement iterations
+    iter_max = 100000 # Max random placement iterations
 
     print('Random positions')
 
@@ -98,7 +98,7 @@ def ran_positions ( n, box, length, soft, quaternions ):
                 e[i,:] = random_vector()
             if soft:
                 break
-            if not overlap ( r[i,:], e[i,:], r[:i,:], e[:i,:], box, length ):
+            if not overlap ( r[i,:], e[i,:], r[:i,:], e[:i,:],box, length ):
                 break
 
             iter = iter + 1
