@@ -1,1 +1,1 @@
-{ "nblock":10, "nstep":1000, "temperature":2.0,"velocities":true,"dt":0.005 }
+{ "nblock":1, "nstep":10000, "temperature":5.0,"velocities":true,"dt":0.005 }
